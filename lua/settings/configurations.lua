@@ -1,0 +1,34 @@
+-- EDITOR CONFIGURATIONS
+
+
+-- Line number
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+-- Code indenting
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.smartindent = true
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.cmd.filetype({ 'indent', 'plugin', 'on' })
+vim.opt.backspace = { 'indent', 'eol', 'start' }
+
+vim.opt.wrap = false
+vim.opt.signcolumn = 'yes'
+
+-- Clipboard and cursor configurations
+vim.opt.clipboard:append('unnamedplus')
+vim.opt.guicursor = { n = block, v = block, c = block, i = block }
+vim.opt.backup = false --disable backup file
+
+-- Syntax highligting configuration
+vim.cmd.syntax('on')
+vim.opt.background = 'dark'
+vim.opt.colorcolumn = '80'
+--vim.opt.termguicolors = true
+--Line enumeration
+
+vim.opt.backup = false --disable backub file
+vim.opt.writebackup = false
+
