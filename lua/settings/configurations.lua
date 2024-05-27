@@ -26,9 +26,25 @@ vim.opt.backup = false --disable backup file
 vim.cmd.syntax('on')
 vim.opt.background = 'dark'
 vim.opt.colorcolumn = '80'
---vim.opt.termguicolors = true
---Line enumeration
+vim.opt.termguicolors = false
 
-vim.opt.backup = false --disable backub file
+-- Color Theme
+-- default
+-- Color Theme options
+-- gruvbox installed
+-- palenight not installed
+-- habamax
+-- murphy
+-- evening
+-- lunaperche
+-- slate
+-- torte
+-- desert
+-- industry
+-- sorbet
+vim.cmd.colorscheme('gruvbox')
+
+-- Disable backup file
+vim.opt.backup = false
 vim.opt.writebackup = false
 

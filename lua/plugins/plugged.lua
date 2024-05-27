@@ -24,24 +24,19 @@ vim.call('plug#end')
     --:LspInstall [<server>...]
     --:LspUninstall <server> ...
 
---require("mason").setup()
---require("mason-lspconfig").setup()
+require("mason").setup()
+require("mason-lspconfig").setup {
+    ensure_installed = { 'clangd', 'jdtls' },
+}
+
+-- Lspconfig language setup
+require("lspconfig").clangd.setup {}
+require("lspconfig").jdtls.setup {}
 
 -- Gruvbox theme settings
-vim.g.gruvbox_contrast_dark = 'soft'
+vim.g.gruvbox_contrast_dark  = 'medium'
 vim.g.gruvbox_transparent_bg = 1
 vim.g.gruvbox_bold = 1
-
--- Color Theme options
--- gruvbox
--- palenight
--- habamax
--- murphy
--- evening
--- lunaperche
--- slate
--- torte
-vim.cmd.colorscheme('gruvbox')
 
 -- NerdTree comands mapping
 vim.keymap.set('n', '<Leader>n', ':NERDTreeFocus<CR>' , { noremap = true })
