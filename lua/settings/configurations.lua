@@ -14,7 +14,7 @@ vim.opt.expandtab = true
 vim.cmd.filetype({ 'indent', 'plugin', 'on' })
 vim.opt.backspace = { 'indent', 'eol', 'start' }
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.signcolumn = 'yes'
 
 -- Clipboard and cursor configurations
@@ -28,21 +28,6 @@ vim.opt.background = 'dark'
 vim.opt.colorcolumn = '80'
 vim.opt.termguicolors = false
 
--- Color Theme
--- default
--- Color Theme options
--- gruvbox installed
--- palenight not installed
--- habamax
--- murphy
--- evening
--- lunaperche
--- slate
--- torte
--- desert
--- industry
--- sorbet
-vim.cmd.colorscheme('gruvbox')
 
 -- Disable backup file
 vim.opt.backup = false
