@@ -4,7 +4,8 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
     Plug ('morhetz/gruvbox')
-    Plug ('scrooloose/nerdtree')
+    -- Plug ('scrooloose/nerdtree')
+    Plug ('nvim-tree/nvim-tree.lua')
     Plug ('luochen1990/rainbow')
     Plug ('vim-airline/vim-airline') -- bottom status line
     Plug ('tmsvg/pear-tree')

@@ -9,13 +9,21 @@
 
 require("mason").setup()
 require("mason-lspconfig").setup {
-    ensure_installed = { 'clangd', 'jdtls', 'pyright', 'lua_ls' }
+    ensure_installed = {
+        'clangd', 'jdtls', 'pyright',
+        'lua_ls', 'html', 'tsserver'
+    }
 }
 
 local config = require("lspconfig")
 
 -- Lua configuration
 config.lua_ls.setup {}
+
+-- Html configuration
+config.html.setup {}
+
+config.tsserver.setup {}
 
 -- C/C++ configuration
 config.clangd.setup {

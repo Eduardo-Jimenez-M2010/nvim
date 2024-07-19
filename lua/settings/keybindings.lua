@@ -52,8 +52,8 @@ vim.keymap.set('n', '<Leader><down>' , '<C-w>j', { noremap = true })
 vim.keymap.set('n', '<Leader><left>' , '<C-w>h', { noremap = true })
 vim.keymap.set('n', '<Leader><right>', '<C-w>l', { noremap = true })
 
--- NerdTree comands mapping
-vim.keymap.set('n', '<Leader>n', ':NERDTreeFocus<CR>' , { noremap = true })
-vim.keymap.set('n', '<C-n>'    , ':NERDTree<CR>'      , { noremap = true })
-vim.keymap.set('n', '<C-t>'    , ':NERDTreeToggle<CR>', { noremap = true })
-vim.keymap.set('n', '<C-f>'    , ':NERDTreeFind<CR>'  , { noremap = true })
+-- NvimTree commands mapping
+vim.keymap.set('n', '<Leader>n', ':NvimTreeFocus<CR>' , { noremap = true })
+vim.keymap.set('n', '<C-n>'    , ':NvimTreeOpen<CR>'      , { noremap = true })
+vim.keymap.set('n', 't'    , ':NvimTreeToggle<CR>', { noremap = true })
+vim.keymap.set('n', '<C-f>'    , ':NvimTreeFindFile<CR>'  , { noremap = true })
