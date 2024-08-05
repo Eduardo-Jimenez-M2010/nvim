@@ -281,6 +281,7 @@ local function cmp_config()
     local luasnip = require("luasnip")
     require("luasnip.loaders.from_vscode").lazy_load()
 
+    vim.keymap.set({ "n", "i" }, "<C-Space>", "<nop>", { noremap = true })
     cmp.setup {
         completion = {
             completeopt = "menu,menuone,preview,noselect",
@@ -297,7 +298,7 @@ local function cmp_config()
             ["<C-f"] = cmp.mapping.scroll_docs(4),
             ["<C-Space"] = cmp.mapping.complete(), -- show completion suggestions
             ["<C-e"] = cmp.mapping.abort(), -- clouse completion window 
-            ["<CR"] = cmp.mapping.confirm({ select = false }),
+            ["<CR"] = cmp.mapping.confirm({ select = true}),
         },
         sources = cmp.config.sources {
             { name = "nvim_lsp" },
