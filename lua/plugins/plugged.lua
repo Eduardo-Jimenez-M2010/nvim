@@ -16,6 +16,8 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
     Plug ('alpaca-tc/vim-endwise')
     Plug ('jeffkreeftmeijer/vim-numbertoggle')
 
+    -- lsp server plugins
+    Plug ('mfussenegger/nvim-jdtls')
     Plug ('williamboman/mason.nvim')
     Plug ('williamboman/mason-lspconfig.nvim')
     Plug ('hrsh7th/cmp-nvim-lsp')
