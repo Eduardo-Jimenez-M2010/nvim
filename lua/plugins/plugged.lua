@@ -3,7 +3,11 @@ local vim = vim
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
+    -- themes
     Plug ('morhetz/gruvbox')
+    Plug ('drewtempelmeyer/palenight.vim')
+    Plug ('agude/vim-eldar')
+
     Plug ('nvim-tree/nvim-tree.lua')
     Plug ('luochen1990/rainbow')
     Plug ('vim-airline/vim-airline') -- bottom status line
