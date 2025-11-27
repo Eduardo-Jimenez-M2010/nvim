@@ -11,17 +11,21 @@ vim.keymap.set('n', '<Leader>q', ':q<CR>')
 vim.keymap.set('n', '<Leader>e', ':e ~/.config/nvim<CR>')
 vim.keymap.set('n', '<F5>', ':source ~/.config/nvim/init.lua<CR>')
 
--- Up scroll
-vim.keymap.set('n', '<C-k>', '2<C-y>')
--- Down scroll
-vim.keymap.set('n', '<C-j>', '2<C-e>')
+-- Scroll configuration
+vim.keymap.set({'n', 'v'}, '<C-k>', '2<C-y>') -- Up
+vim.keymap.set({'n', 'v'}, '<C-j>', '2<C-e>') -- Down
+vim.keymap.set({'n', 'v'}, '<C-h>', '2zh'   ) -- Rigth
+vim.keymap.set({'n', 'v'}, '<C-l>', '2zl'   ) -- Left
+vim.keymap.set({'n', 'v'}, '<C-S-l>', ':noh<CR>', { noremap = true })
 
 -- Tabs configurations
-vim.keymap.set('n', '<Leader>nt', ':tabnew<CR>'  , { noremap = true })
-vim.keymap.set('n', '<Leader>ct', ':tabclose<CR>', { noremap = true })
-vim.keymap.set('n', '<Leader>st', ':tab split<CR>', { noremap = true })
-vim.keymap.set('n', '<Leader>l' , ':tabnext +<CR>', { noremap = true })
-vim.keymap.set('n', '<Leader>h' , ':tabnext -<CR>', { noremap = true })
+vim.keymap.set('n', '<Leader>nt'    , ':tabnew<CR>'     , { noremap = true }) -- New tab
+vim.keymap.set('n', '<Leader>ct'    , ':tabclose<CR>'   , { noremap = true }) -- Close tab
+vim.keymap.set('n', '<Leader>st'    , ':tab split<CR>'  , { noremap = true }) -- Split tab (copy tab)
+vim.keymap.set('n', '<Leader>l'     , ':tabnext<CR>'    , { noremap = true }) -- Change to left side tab
+vim.keymap.set('n', '<Leader>h'     , ':tabprevious<CR>', { noremap = true }) -- Change to right side tab
+vim.keymap.set('n', '<Leader><C-l>' , ':tabmove +<CR>'  , { noremap = true }) -- Move tab to right
+vim.keymap.set('n', '<Leader><C-h>' , ':tabmove -<CR>'  , { noremap = true }) -- Move tab to left
 
 vim.keymap.set('n', '<leader>t', ':terminal<CR>', { noremap = true })
 

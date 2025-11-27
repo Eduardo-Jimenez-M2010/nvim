@@ -14,18 +14,18 @@ vim.opt.expandtab = true
 vim.cmd.filetype({ 'indent', 'plugin', 'on' })
 vim.opt.backspace = { 'indent', 'eol', 'start' }
 
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.signcolumn = 'yes'
 
 -- Clipboard and cursor configurations
 vim.opt.clipboard:append('unnamedplus')
-vim.opt.guicursor = { n = block, v = block, c = block, i = block }
+vim.opt.guicursor = { n = 'block', v = 'block', c = 'block', i = 'block' }
 vim.opt.backup = false --disable backup file
 
 -- Syntax highligting configuration
 vim.cmd.syntax('on')
 vim.opt.background = 'dark'
-vim.opt.colorcolumn = '80'
+--vim.opt.colorcolumn = '80'
 vim.opt.termguicolors = false
 
 
