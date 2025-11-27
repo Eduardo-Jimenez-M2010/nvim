@@ -10,9 +10,10 @@
 require("mason").setup()
 require("mason-lspconfig").setup {
     ensure_installed = {
-        'clangd', 'jdtls', 'pyright',
-        'lua_ls', 'html', 'tsserver',
-        'phpactor', 'cssls'
+        'clangd'  , 'jdtls', 'pyright',
+        'lua_ls'  , 'html' , 'biome',
+        'phpactor', 'cssls', 'bashls',
+        'asm_lsp', 'texlab'
     }
 }
 
@@ -138,4 +139,25 @@ config.jdtls.setup {
 config.pyright.setup {
     capabilities = capabilities,
     on_attach    = on_attach,
+}
+
+config.texlab.setup {
+    capabilities = capabilities,
+    on_attach    = on_attach,
+}
+
+-- BashScrip configuration
+config.bashls.setup {
+    capabilities = capabilities,
+    on_attach    = on_attach,
+}
+
+-- Assembler configuration
+config.asm_lsp.setup {
+    filetypes = { "asm", "s", "masm", "nasm" },
+    root_dir = config.util.root_pattern(".git") or vim.loop.cwd,
+    settings = {
+        capabilities = capabilities,
+        on_attach    = on_attach,
+    }
 }
