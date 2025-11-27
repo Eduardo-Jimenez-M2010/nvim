@@ -36,6 +36,7 @@ vim.call('plug#begin', '~/.config/nvim/plugged')
     Plug ('saadparwaiz1/cmp_luasnip')
     Plug ('rafamadriz/friendly-snippets')
     Plug ('hrsh7th/nvim-cmp')
+    Plug ('elkowar/yuck.vim')
 vim.call('plug#end')
 -- NvimTree
 local function my_on_attach(bufnr)
