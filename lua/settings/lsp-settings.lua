@@ -164,7 +164,7 @@ vim.lsp.config('bashls', {
 -- Assembler configuration
 vim.lsp.config('asm_lsp', {
     filetypes = { "asm", "s", "masm", "nasm" },
-    root_dir = config.util.root_pattern(".git") or vim.loop.cwd,
+    -- root_dir = vim.lsp.util.root_pattern(".git") or vim.loop.cwd,
     settings = {
         capabilities = capabilities,
         on_attach    = on_attach,
