@@ -2,7 +2,7 @@
 
 --Plugins
 package.loaded['plugins/plugged'] = nil
-require('plugins/plugged')
+require('plugins')
 
 --Settings
 package.loaded['settings'] = nil
