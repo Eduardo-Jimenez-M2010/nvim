@@ -73,100 +73,19 @@ for type, icon in pairs(signs) do
     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
--- Lua configuration
-vim.lsp.config('lua_ls', {
+vim.lsp.config('*', {
     capabilities = capabilities,
-    on_attach    = on_attach,
-    settings = {
-        Lua = {
-            -- make the language server recognize "vim" global
-            diagnostics = {
-                globals = { "vim" },
-            },
-            workspace = {
-                -- make language server aware of runtime files
-                library = {
-                    [vim.fn.expand("$VIMRUNTIME/lua")]   = true,
-                    [vim.fn.stdpath("config") .. "/lua"] = true,
-                }
-            }
-        }
-    }
+    on_attach    = on_attach
 })
 
--- Html configuration
-vim.lsp.config('html', {
-    capabilities = capabilities,
-    on_attach    = on_attach,
-})
-
-vim.lsp.config('biome', {
-    capabilities = capabilities,
-    on_attach    = on_attach,
-    cmd = { "biome", "lsp-proxy" },
-    filetypes = {
-        "astro", "css", "graphql", "javascript", "javascriptreact",
-        "json", "jsonc", "svelte", "typescript", "typescript.tsx",
-        "typescriptreact", "vue"
-    }
-})
-
-vim.lsp.config('cssls', {
-    capabilities = capabilities,
-    on_attach    = on_attach,
-})
-
-vim.lsp.config('phpactor', {
-    capabilities = capabilities,
-    on_attach    = on_attach,
-})
-
--- C/C++ configuration
-vim.lsp.config('clangd', {
-    capabilities = capabilities,
-    on_attach    = on_attach,
-
-    cmd = { "clangd", "--background-index" },
-    init_options = {
-        compilationDatabasePath = ".",
-        clangdFileStatus = true
-    },
-    args = {
-        --"--query-driver=/usr/bin/gcc,/usr/bin/g++",
-        --"--extra-arg=-I./lib"
-    },
-    filetypes = { 'c', 'cpp' }
-})
-
--- Java configuration
-vim.lsp.config('jdtls', {
-    capabilities = capabilities,
-    on_attach    = on_attach,
-})
-
--- Python configuration
-vim.lsp.config('pyright', {
-    capabilities = capabilities,
-    on_attach    = on_attach,
-})
-
-vim.lsp.config('texlab', {
-    capabilities = capabilities,
-    on_attach    = on_attach,
-})
-
--- BashScrip configuration
-vim.lsp.config('bashls', {
-    capabilities = capabilities,
-    on_attach    = on_attach,
-})
-
--- Assembler configuration
-vim.lsp.config('asm_lsp', {
-    filetypes = { "asm", "s", "masm", "nasm" },
-    -- root_dir = vim.lsp.util.root_pattern(".git") or vim.loop.cwd,
-    settings = {
-        capabilities = capabilities,
-        on_attach    = on_attach,
-    }
-})
+vim.lsp.enable('lua_ls')   -- Lua
+vim.lsp.enable('html')     -- HTML
+vim.lsp.enable('biome')    -- Javascrit/Typescript
+vim.lsp.enable('cssls')    -- CSS configuration
+vim.lsp.enable('phpactor') -- PHP configuration
+vim.lsp.enable('clangd')   -- C/C++ configuration
+vim.lsp.enable('jdtls')    -- Java configuration
+vim.lsp.enable('pyright')  -- Python configuration
+vim.lsp.enable('texlab')   -- LaTeX
+vim.lsp.enable('bashls')   -- BashScrip configuration
+vim.lsp.enable('asm_lsp')  -- Assembler configuration
